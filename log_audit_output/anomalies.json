@@ -1,0 +1,216 @@
+[
+  {
+    "anomaly_type": "slow_request",
+    "time_window_start": "2026-06-15T02:00:00+00:00",
+    "time_window_end": "2026-06-15T02:05:00+00:00",
+    "severity": "high",
+    "evidence": {
+      "window_p95": 2.24,
+      "overall_p95": 0.477,
+      "ratio": 4.69,
+      "slow_count": 1,
+      "slow_paths": {
+        "/api/orders": 1
+      }
+    },
+    "description": "Slow requests: p95=2.240s (overall_p95=0.477s, ratio=4.7x), 1 slow requests"
+  },
+  {
+    "anomaly_type": "slow_request",
+    "time_window_start": "2026-06-15T02:05:00+00:00",
+    "time_window_end": "2026-06-15T02:10:00+00:00",
+    "severity": "high",
+    "evidence": {
+      "window_p95": 2.252,
+      "overall_p95": 0.477,
+      "ratio": 4.72,
+      "slow_count": 1,
+      "slow_paths": {
+        "/api/orders": 1
+      }
+    },
+    "description": "Slow requests: p95=2.252s (overall_p95=0.477s, ratio=4.7x), 1 slow requests"
+  },
+  {
+    "anomaly_type": "slow_request",
+    "time_window_start": "2026-06-15T02:10:00+00:00",
+    "time_window_end": "2026-06-15T02:15:00+00:00",
+    "severity": "high",
+    "evidence": {
+      "window_p95": 2.297,
+      "overall_p95": 0.477,
+      "ratio": 4.81,
+      "slow_count": 1,
+      "slow_paths": {
+        "/api/orders": 1
+      }
+    },
+    "description": "Slow requests: p95=2.297s (overall_p95=0.477s, ratio=4.8x), 1 slow requests"
+  },
+  {
+    "anomaly_type": "slow_request",
+    "time_window_start": "2026-06-15T02:15:00+00:00",
+    "time_window_end": "2026-06-15T02:20:00+00:00",
+    "severity": "high",
+    "evidence": {
+      "window_p95": 1.789,
+      "overall_p95": 0.477,
+      "ratio": 3.75,
+      "slow_count": 1,
+      "slow_paths": {
+        "/api/orders": 1
+      }
+    },
+    "description": "Slow requests: p95=1.789s (overall_p95=0.477s, ratio=3.7x), 1 slow requests"
+  },
+  {
+    "anomaly_type": "error_spike",
+    "time_window_start": "2026-06-15T06:00:00+00:00",
+    "time_window_end": "2026-06-15T06:05:00+00:00",
+    "severity": "critical",
+    "evidence": {
+      "error_rate": 0.1765,
+      "error_count": 3,
+      "total_count": 17,
+      "baseline_mean": 0.0033,
+      "baseline_std": 0.0111,
+      "sigma_above_baseline": 15.66,
+      "gateway_5xx_ips": [
+        "192.168.1.102"
+      ],
+      "app_error_modules": [
+        "payment-service"
+      ]
+    },
+    "description": "Error spike: rate=17.65% (baseline=0.33%±1.11%), 3 errors in 17 events, sigma_above=15.7"
+  },
+  {
+    "anomaly_type": "error_spike",
+    "time_window_start": "2026-06-15T06:05:00+00:00",
+    "time_window_end": "2026-06-15T06:10:00+00:00",
+    "severity": "critical",
+    "evidence": {
+      "error_rate": 0.3333,
+      "error_count": 6,
+      "total_count": 18,
+      "baseline_mean": 0.018,
+      "baseline_std": 0.049,
+      "sigma_above_baseline": 6.43,
+      "gateway_5xx_ips": [
+        "10.0.0.51",
+        "192.168.1.100",
+        "192.168.1.101",
+        "192.168.1.102"
+      ],
+      "app_error_modules": [
+        "payment-service",
+        "search"
+      ]
+    },
+    "description": "Error spike: rate=33.33% (baseline=1.80%±4.90%), 6 errors in 18 events, sigma_above=6.4"
+  },
+  {
+    "anomaly_type": "error_spike",
+    "time_window_start": "2026-06-15T06:10:00+00:00",
+    "time_window_end": "2026-06-15T06:15:00+00:00",
+    "severity": "medium",
+    "evidence": {
+      "error_rate": 0.2917,
+      "error_count": 7,
+      "total_count": 24,
+      "baseline_mean": 0.0458,
+      "baseline_std": 0.0994,
+      "sigma_above_baseline": 2.47,
+      "gateway_5xx_ips": [
+        "10.0.0.50",
+        "192.168.1.101",
+        "192.168.1.102"
+      ],
+      "app_error_modules": [
+        "main"
+      ]
+    },
+    "description": "Error spike: rate=29.17% (baseline=4.58%±9.94%), 7 errors in 24 events, sigma_above=2.5"
+  },
+  {
+    "anomaly_type": "login_failure_burst",
+    "time_window_start": "2026-06-15T10:00:00+00:00",
+    "time_window_end": "2026-06-15T10:05:00+00:00",
+    "severity": "critical",
+    "evidence": {
+      "src_ip": "10.0.0.99",
+      "failure_count": 20,
+      "targeted_users": [
+        "admin"
+      ]
+    },
+    "description": "Login failure burst: 20 failures from 10.0.0.99, targeting users: admin"
+  },
+  {
+    "anomaly_type": "error_spike",
+    "time_window_start": "2026-06-15T10:40:00+00:00",
+    "time_window_end": "2026-06-15T10:45:00+00:00",
+    "severity": "high",
+    "evidence": {
+      "error_rate": 0.087,
+      "error_count": 2,
+      "total_count": 23,
+      "baseline_mean": 0.0124,
+      "baseline_std": 0.0216,
+      "sigma_above_baseline": 3.46,
+      "gateway_5xx_ips": [
+        "192.168.1.101"
+      ],
+      "app_error_modules": []
+    },
+    "description": "Error spike: rate=8.70% (baseline=1.24%±2.16%), 2 errors in 23 events, sigma_above=3.5"
+  },
+  {
+    "anomaly_type": "scan_404",
+    "time_window_start": "2026-06-15T14:00:00+00:00",
+    "time_window_end": "2026-06-15T14:05:00+00:00",
+    "severity": "high",
+    "evidence": {
+      "src_ip": "10.0.0.88",
+      "unique_404_paths": 25,
+      "total_404_requests": 25,
+      "sample_paths": [
+        "/.env",
+        "/.git",
+        "/.git/config",
+        "/.htaccess",
+        "/actuator",
+        "/actuator/health",
+        "/admin",
+        "/admin/dashboard",
+        "/admin/login",
+        "/api/admin"
+      ]
+    },
+    "description": "404 scan: 25 unique 404 paths from 10.0.0.88, total 25 requests"
+  },
+  {
+    "anomaly_type": "scan_404",
+    "time_window_start": "2026-06-15T14:05:00+00:00",
+    "time_window_end": "2026-06-15T14:10:00+00:00",
+    "severity": "high",
+    "evidence": {
+      "src_ip": "10.0.0.88",
+      "unique_404_paths": 25,
+      "total_404_requests": 25,
+      "sample_paths": [
+        "/api/v1/debug",
+        "/api/v1/internal",
+        "/api/v2/admin",
+        "/backup",
+        "/cgi-bin",
+        "/cgi-bin/test",
+        "/elasticsearch",
+        "/gitlab",
+        "/grafana",
+        "/health-check"
+      ]
+    },
+    "description": "404 scan: 25 unique 404 paths from 10.0.0.88, total 25 requests"
+  }
+]

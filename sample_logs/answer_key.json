@@ -1,0 +1,95 @@
+{
+  "generated_at": "2026-06-16T01:34:56.184102+00:00",
+  "time_range": {
+    "start_local": "2026-06-15T00:00:00+08:00",
+    "end_local": "2026-06-15T23:59:59+08:00",
+    "start_utc": "2026-06-14T16:00:00Z",
+    "end_utc": "2026-06-15T15:59:59Z"
+  },
+  "timezone_notes": {
+    "gateway_logs": "+0800 (Asia/Shanghai)",
+    "app_logs": "+0800 (Asia/Shanghai)",
+    "login_logs": "+0900 (Asia/Tokyo) - one hour ahead, tests timezone alignment",
+    "resource_logs": "+0000 (UTC)"
+  },
+  "expected_anomalies": [
+    {
+      "id": 1,
+      "type": "slow_request",
+      "time_range_utc": ["2026-06-15T02:00:00Z", "2026-06-15T02:20:00Z"],
+      "time_range_local": [
+        "2026-06-15T10:00:00+08:00",
+        "2026-06-15T10:20:00+08:00"
+      ],
+      "description": "Slow requests on /api/orders, p95 2-5s (normal <0.5s)",
+      "expected_severity": "high or critical",
+      "expected_evidence": {
+        "path": "/api/orders",
+        "p95_range_seconds": [2.0, 5.0],
+        "normal_p95_seconds": [0.01, 0.5]
+      }
+    },
+    {
+      "id": 2,
+      "type": "error_spike",
+      "time_range_utc": ["2026-06-15T06:00:00Z", "2026-06-15T06:15:00Z"],
+      "time_range_local": [
+        "2026-06-15T14:00:00+08:00",
+        "2026-06-15T14:15:00+08:00"
+      ],
+      "description": "5xx error burst at ~30% rate, app ERROR logs with stack traces",
+      "expected_severity": "critical",
+      "expected_evidence": {
+        "5xx_rate": "~0.30",
+        "normal_5xx_rate": "~0.01",
+        "app_error_stack_traces": true,
+        "resource_cpu_spike": "80-99%",
+        "resource_mem_spike": "85-98%"
+      }
+    },
+    {
+      "id": 3,
+      "type": "login_failure_burst",
+      "time_range_utc": ["2026-06-15T10:00:00Z", "2026-06-15T10:05:00Z"],
+      "time_range_local": [
+        "2026-06-15T18:00:00+08:00 / 19:00:00+09:00",
+        "2026-06-15T18:05:00+08:00 / 19:05:00+09:00"
+      ],
+      "description": "20 login failures from 10.0.0.99 targeting admin user",
+      "expected_severity": "high or critical",
+      "expected_evidence": {
+        "src_ip": "10.0.0.99",
+        "failure_count": 20,
+        "targeted_user": "admin",
+        "login_log_timezone": "+0900"
+      }
+    },
+    {
+      "id": 4,
+      "type": "scan_404",
+      "time_range_utc": ["2026-06-15T14:00:00Z", "2026-06-15T14:10:00Z"],
+      "time_range_local": [
+        "2026-06-15T22:00:00+08:00",
+        "2026-06-15T22:10:00+08:00"
+      ],
+      "description": "51 unique 404 paths from 10.0.0.88, scanning for admin panels and configs",
+      "expected_severity": "high (split across two 5-min windows)",
+      "expected_evidence": {
+        "src_ip": "10.0.0.88",
+        "unique_404_paths": 51,
+        "total_404_requests": 51,
+        "user_agent": "python-requests/2.28.0"
+      }
+    }
+  ],
+  "expected_sessions": {
+    "notes": "Sessions split by 30-min gap. Normal IPs should produce several sessions during the day. Scanner IP 10.0.0.88 should produce one session during 22:00-22:10 +0800. Login attacker 10.0.0.99 won't appear in gateway sessions (only in login logs).",
+    "notable_ips": {
+      "10.0.0.88": "Single short session during scan period"
+    }
+  },
+  "multi_line_stack_trace_test": {
+    "description": "App ERROR entries during 14:00-14:15 +0800 should have multi-line stack traces. The parser must merge these into single records, not split them.",
+    "expected_error_count_approx": "Varies, but each ERROR should be ONE record with stack_trace field populated"
+  }
+}

@@ -1,0 +1,19 @@
+metric,value
+total_gateway_requests,1853
+total_app_records,1779
+total_login_records,281
+total_resource_records,1440
+5xx_count,28
+4xx_count,71
+error_rate,0.0151
+p50_latency,0.254
+p95_latency,0.477
+p99_latency,0.496
+top_paths,"[{'path': '/api/orders', 'count': 228}, {'path': '/api/health', 'count': 216}, {'path': '/api/cart', 'count': 202}, {'path': '/api/products', 'count': 197}, {'path': '/', 'count': 197}, {'path': '/api/search', 'count': 195}, {'path': '/api/payments', 'count': 192}, {'path': '/dashboard', 'count': 190}, {'path': '/api/users', 'count': 185}, {'path': '/admin', 'count': 1}]"
+top_ips,"[{'ip': '10.0.0.50', 'count': 379}, {'ip': '10.0.0.51', 'count': 375}, {'ip': '192.168.1.102', 'count': 352}, {'ip': '192.168.1.100', 'count': 351}, {'ip': '192.168.1.101', 'count': 345}, {'ip': '10.0.0.88', 'count': 51}]"
+app_errors,4
+app_warnings,81
+login_failures,50
+login_successes,231
+total_sessions,24
+sessions_with_errors,7

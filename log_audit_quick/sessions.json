@@ -1,0 +1,325 @@
+[
+  {
+    "session_id": "53439b090d11",
+    "client_ip": "192.168.1.101",
+    "start_time": "2026-06-14T16:02:43+00:00",
+    "end_time": "2026-06-14T16:09:51+00:00",
+    "request_count": 2,
+    "duration_seconds": 428.0,
+    "status_distribution": {
+      "200": 2
+    },
+    "has_error": false
+  },
+  {
+    "session_id": "e9453bd73317",
+    "client_ip": "192.168.1.102",
+    "start_time": "2026-06-14T16:10:06+00:00",
+    "end_time": "2026-06-14T17:36:12+00:00",
+    "request_count": 7,
+    "duration_seconds": 5166.0,
+    "status_distribution": {
+      "200": 7
+    },
+    "has_error": false
+  },
+  {
+    "session_id": "2aa99352244b",
+    "client_ip": "10.0.0.51",
+    "start_time": "2026-06-14T16:12:35+00:00",
+    "end_time": "2026-06-15T06:05:11+00:00",
+    "request_count": 221,
+    "duration_seconds": 49956.0,
+    "status_distribution": {
+      "200": 214,
+      "502": 1,
+      "301": 3,
+      "404": 1,
+      "403": 1,
+      "500": 1
+    },
+    "has_error": true
+  },
+  {
+    "session_id": "5ef239ea0b8d",
+    "client_ip": "192.168.1.100",
+    "start_time": "2026-06-14T16:17:17+00:00",
+    "end_time": "2026-06-14T18:25:44+00:00",
+    "request_count": 16,
+    "duration_seconds": 7707.0,
+    "status_distribution": {
+      "200": 16
+    },
+    "has_error": false
+  },
+  {
+    "session_id": "5bf2a183ce1e",
+    "client_ip": "10.0.0.50",
+    "start_time": "2026-06-14T16:23:08+00:00",
+    "end_time": "2026-06-14T16:58:12+00:00",
+    "request_count": 4,
+    "duration_seconds": 2104.0,
+    "status_distribution": {
+      "200": 3,
+      "301": 1
+    },
+    "has_error": false
+  },
+  {
+    "session_id": "29206f2ac24a",
+    "client_ip": "192.168.1.101",
+    "start_time": "2026-06-14T16:49:06+00:00",
+    "end_time": "2026-06-14T17:55:20+00:00",
+    "request_count": 9,
+    "duration_seconds": 3974.0,
+    "status_distribution": {
+      "200": 8,
+      "502": 1
+    },
+    "has_error": true
+  },
+  {
+    "session_id": "29d6971c8789",
+    "client_ip": "10.0.0.50",
+    "start_time": "2026-06-14T17:35:42+00:00",
+    "end_time": "2026-06-14T22:04:11+00:00",
+    "request_count": 36,
+    "duration_seconds": 16109.0,
+    "status_distribution": {
+      "200": 34,
+      "301": 1,
+      "403": 1
+    },
+    "has_error": false
+  },
+  {
+    "session_id": "48303f3750e6",
+    "client_ip": "192.168.1.102",
+    "start_time": "2026-06-14T18:16:35+00:00",
+    "end_time": "2026-06-14T18:22:06+00:00",
+    "request_count": 3,
+    "duration_seconds": 331.0,
+    "status_distribution": {
+      "200": 3
+    },
+    "has_error": false
+  },
+  {
+    "session_id": "fbe2c15f8ea6",
+    "client_ip": "192.168.1.102",
+    "start_time": "2026-06-14T18:57:53+00:00",
+    "end_time": "2026-06-14T20:14:29+00:00",
+    "request_count": 14,
+    "duration_seconds": 4596.0,
+    "status_distribution": {
+      "200": 13,
+      "404": 1
+    },
+    "has_error": false
+  },
+  {
+    "session_id": "dde2e0adf6b8",
+    "client_ip": "192.168.1.101",
+    "start_time": "2026-06-14T18:58:17+00:00",
+    "end_time": "2026-06-14T18:58:17+00:00",
+    "request_count": 1,
+    "duration_seconds": 0.0,
+    "status_distribution": {
+      "200": 1
+    },
+    "has_error": false
+  },
+  {
+    "session_id": "ed13fc3d3e93",
+    "client_ip": "192.168.1.100",
+    "start_time": "2026-06-14T18:59:55+00:00",
+    "end_time": "2026-06-14T19:23:34+00:00",
+    "request_count": 5,
+    "duration_seconds": 1419.0,
+    "status_distribution": {
+      "200": 5
+    },
+    "has_error": false
+  },
+  {
+    "session_id": "df641bf85dfe",
+    "client_ip": "192.168.1.101",
+    "start_time": "2026-06-14T19:37:04+00:00",
+    "end_time": "2026-06-14T20:10:16+00:00",
+    "request_count": 6,
+    "duration_seconds": 1992.0,
+    "status_distribution": {
+      "200": 6
+    },
+    "has_error": false
+  },
+  {
+    "session_id": "91382e5f8a38",
+    "client_ip": "192.168.1.100",
+    "start_time": "2026-06-14T19:53:55+00:00",
+    "end_time": "2026-06-14T21:44:35+00:00",
+    "request_count": 15,
+    "duration_seconds": 6640.0,
+    "status_distribution": {
+      "200": 15
+    },
+    "has_error": false
+  },
+  {
+    "session_id": "caeaee13e6eb",
+    "client_ip": "192.168.1.101",
+    "start_time": "2026-06-14T20:48:58+00:00",
+    "end_time": "2026-06-14T21:19:42+00:00",
+    "request_count": 4,
+    "duration_seconds": 1844.0,
+    "status_distribution": {
+      "200": 4
+    },
+    "has_error": false
+  },
+  {
+    "session_id": "73af8f5d2578",
+    "client_ip": "192.168.1.102",
+    "start_time": "2026-06-14T21:04:56+00:00",
+    "end_time": "2026-06-14T22:39:02+00:00",
+    "request_count": 17,
+    "duration_seconds": 5646.0,
+    "status_distribution": {
+      "200": 16,
+      "301": 1
+    },
+    "has_error": false
+  },
+  {
+    "session_id": "935d7ce9c3dc",
+    "client_ip": "192.168.1.101",
+    "start_time": "2026-06-14T22:05:14+00:00",
+    "end_time": "2026-06-15T12:36:23+00:00",
+    "request_count": 299,
+    "duration_seconds": 52269.0,
+    "status_distribution": {
+      "301": 10,
+      "200": 280,
+      "502": 2,
+      "403": 1,
+      "500": 6
+    },
+    "has_error": true
+  },
+  {
+    "session_id": "f9b1a419d67e",
+    "client_ip": "192.168.1.100",
+    "start_time": "2026-06-14T22:41:49+00:00",
+    "end_time": "2026-06-15T15:38:59+00:00",
+    "request_count": 315,
+    "duration_seconds": 61030.0,
+    "status_distribution": {
+      "200": 297,
+      "500": 1,
+      "404": 7,
+      "301": 6,
+      "403": 1,
+      "502": 3
+    },
+    "has_error": true
+  },
+  {
+    "session_id": "352c1b1eb251",
+    "client_ip": "10.0.0.50",
+    "start_time": "2026-06-14T22:42:05+00:00",
+    "end_time": "2026-06-15T15:49:10+00:00",
+    "request_count": 339,
+    "duration_seconds": 61625.0,
+    "status_distribution": {
+      "200": 326,
+      "301": 6,
+      "404": 2,
+      "502": 1,
+      "403": 2,
+      "500": 2
+    },
+    "has_error": true
+  },
+  {
+    "session_id": "025a333ad4d6",
+    "client_ip": "192.168.1.102",
+    "start_time": "2026-06-14T23:10:10+00:00",
+    "end_time": "2026-06-15T14:21:26+00:00",
+    "request_count": 308,
+    "duration_seconds": 54676.0,
+    "status_distribution": {
+      "200": 289,
+      "301": 11,
+      "502": 2,
+      "404": 1,
+      "500": 3,
+      "503": 2
+    },
+    "has_error": true
+  },
+  {
+    "session_id": "e86e95eb1a22",
+    "client_ip": "10.0.0.51",
+    "start_time": "2026-06-15T06:35:27+00:00",
+    "end_time": "2026-06-15T13:49:38+00:00",
+    "request_count": 142,
+    "duration_seconds": 26051.0,
+    "status_distribution": {
+      "200": 132,
+      "301": 6,
+      "500": 2,
+      "403": 1,
+      "502": 1
+    },
+    "has_error": true
+  },
+  {
+    "session_id": "fc9f022eacf8",
+    "client_ip": "192.168.1.101",
+    "start_time": "2026-06-15T13:09:33+00:00",
+    "end_time": "2026-06-15T15:59:20+00:00",
+    "request_count": 24,
+    "duration_seconds": 10187.0,
+    "status_distribution": {
+      "200": 23,
+      "403": 1
+    },
+    "has_error": false
+  },
+  {
+    "session_id": "8bb9de4fb14e",
+    "client_ip": "10.0.0.88",
+    "start_time": "2026-06-15T14:00:00+00:00",
+    "end_time": "2026-06-15T14:10:02+00:00",
+    "request_count": 51,
+    "duration_seconds": 602.0,
+    "status_distribution": {
+      "404": 51
+    },
+    "has_error": false
+  },
+  {
+    "session_id": "c71d7954fe33",
+    "client_ip": "10.0.0.51",
+    "start_time": "2026-06-15T14:25:16+00:00",
+    "end_time": "2026-06-15T15:56:12+00:00",
+    "request_count": 12,
+    "duration_seconds": 5456.0,
+    "status_distribution": {
+      "200": 12
+    },
+    "has_error": false
+  },
+  {
+    "session_id": "5456ddda363c",
+    "client_ip": "192.168.1.102",
+    "start_time": "2026-06-15T15:45:59+00:00",
+    "end_time": "2026-06-15T15:53:12+00:00",
+    "request_count": 3,
+    "duration_seconds": 433.0,
+    "status_distribution": {
+      "200": 3
+    },
+    "has_error": false
+  }
+]
